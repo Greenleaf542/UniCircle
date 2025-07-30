@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniCircle - Smart Campus Events</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-blue-700 text-white py-6 shadow-md">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">UniCircle</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="#" class="hover:underline">Home</a></li>
+          <li><a href="#events" class="hover:underline">Events</a></li>
+          <li><a href="#host" class="hover:underline">Host</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-700 to-purple-600 text-white py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-4">Discover, Book & Host Campus Events</h2>
+      <p class="mb-6">Join your campus circles, attend fun events, and create your own – all in one place.</p>
+      <a href="#events" class="bg-white text-blue-700 px-6 py-2 rounded shadow font-semibold hover:bg-gray-100">Explore Events</a>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="py-16">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-10">Upcoming Events</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Event Card 1 -->
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition">
+          <h4 class="text-xl font-bold mb-2">🎮 LAN Blast – Gaming Tournament</h4>
+          <p class="text-sm text-gray-600 mb-2">Hostel A, July 30 – 7PM to 11PM</p>
+          <p class="text-sm mb-4">Counter Strike | FIFA | Valorant | ₹500 Prize</p>
+          <a href="#" class="text-blue-600 font-semibold hover:underline">Join Now</a>
+        </div>
+
+        <!-- Event Card 2 -->
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition">
+          <h4 class="text-xl font-bold mb-2">📚 Study Jam – DSA Group Prep</h4>
+          <p class="text-sm text-gray-600 mb-2">Library Room 3, July 31 – 6PM</p>
+          <p class="text-sm mb-4">LeetCode Problems + Mock Quiz + Snacks</p>
+          <a href="#" class="text-blue-600 font-semibold hover:underline">Join Now</a>
+        </div>
+
+        <!-- Event Card 3 -->
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition">
+          <h4 class="text-xl font-bold mb-2">🎤 Open Mic – Talent Night</h4>
+          <p class="text-sm text-gray-600 mb-2">Auditorium, August 2 – 5PM</p>
+          <p class="text-sm mb-4">Stand-up, Music, Poetry & Dance</p>
+          <a href="#" class="text-blue-600 font-semibold hover:underline">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Host Event Section -->
+  <section id="host" class="bg-gray-100 py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-6">Want to Host an Event?</h3>
+      <p class="mb-6">Submit your event details and we'll help you list it on UniCircle.</p>
+      <a href="#" class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-800">Host Your Event</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <footer id="contact" class="bg-blue-700 text-white py-6 text-center">
+    <p>&copy; 2025 UniCircle. All rights reserved.</p>
+  </footer>
+</body>
+</html>
