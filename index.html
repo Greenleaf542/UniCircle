@@ -77,7 +77,7 @@
   </script>
 
   <!-- Hero Section -->
-  <section class="w-full text-white py-20 lg:bg-cover bg-no-repeat h-96 relative sm:bg-center" style="background-image: url('/image2.jpg')">
+  <section class="w-full text-white py-20 lg:bg-cover bg-no-repeat h-96 relative sm:bg-center" style="background-image: url('/happy-event-manager-using-laptop-banquet-hall.webp')" loading="lazy">
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     <div class="relative container mx-auto px-6 lg:text-left">
       <h2 class="text-4xl font-bold mb-4">Discover, Book & Host Campus Events</h2>
@@ -150,7 +150,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
         <!-- Event Card 1 -->
         <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden max-w-sm mx-auto">
-          <img src="/game.jpg" alt="Event Image" class="w-full h-48 object-cover rounded-t-xl" />
+          <img src="/game.webp" alt="Event Image" loading="lazy" class="w-full h-48 object-cover rounded-t-xl" />
           <div class="p-6">
             <h4 class="text-xl font-bold mb-2">🎮 LAN Blast – Gaming Tournament</h4>
             <p class="text-sm text-gray-600 mb-2">Hostel A, July 30 – 7PM to 11PM</p>
@@ -160,7 +160,7 @@
         </div>
         <!-- Event Card 2 -->
         <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden max-w-sm mx-auto">
-          <img src="/study.jpg" alt="Event Image" class="w-full h-48 object-cover rounded-t-xl" />
+          <img src="/study.webp" alt="Event Image" loading="lazy" class="w-full h-48 object-cover rounded-t-xl" />
           <div class="p-6">
             <h4 class="text-xl font-bold mb-2">📚 Study Jam – DSA Group Prep</h4>
             <p class="text-sm text-gray-600 mb-2">Library Room 3, July 31 – 6PM</p>
@@ -170,7 +170,7 @@
         </div>
         <!-- Event Card 3 -->
         <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden max-w-sm mx-auto">
-          <img src="/mic.jpg" alt="Event Image" class="w-full h-48 object-cover rounded-t-xl" />
+          <img src="/mic.webp" alt="Event Image" loading="lazy" class="w-full h-48 object-cover rounded-t-xl" />
           <div class="p-6">
             <h4 class="text-xl font-bold mb-2">🎤 Open Mic – Talent Night</h4>
             <p class="text-sm text-gray-600 mb-2">Auditorium, August 2 – 5PM</p>
@@ -184,7 +184,7 @@
 
   <!-- Host Event Section -->
   <section id="host" class="relative bg-gray-100 py-16 bg-cover bg-center bg-fixed h-96" 
-         style="background-image: url('/full-shot-friends-reading-messages_23-2150104822.jpg');">
+         style="background-image: url('/full-shot-friends-reading-messages_23-2150104822.webp');" loading="lazy">
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     <div class="relative container mx-auto px-6 text-center">
       <h3 class="text-3xl font-bold mb-6 text-white">Want to Host an Event?</h3>
@@ -240,6 +240,31 @@
     </div>
     <div class="text-center text-sm mt-8">© 2025 UniCircle. All rights reserved.</div>
   </footer>
+<!-- Chatbot Widget -->
+<div id="chatbot" class="fixed bottom-6 right-6 w-72 bg-white border border-gray-300 rounded-xl shadow-lg flex flex-col overflow-hidden z-50">
+  <!-- Header -->
+  <div id="chatbot-header" class="bg-blue-700 text-white px-4 py-2 cursor-pointer flex justify-center items-center relative">
+    <span class="font-medium text-lg">Chat with us</span>
+    <!-- Icon on the right side -->
+    <img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" alt="Chat Icon" class="w-5 h-5 absolute right-3 top-2.5 cursor-pointer text-white" id="chatbot-toggle">
+  </div>
+
+  <!-- Messages -->
+  <div id="chatbot-messages" class="p-4 h-60 overflow-y-auto hidden flex-col space-y-2 bg-gray-50">
+    <div class="text-gray-700">Hi! Ask me anything about UniCircle.</div>
+  </div>
+
+  <!-- Input -->
+  <div id="chatbot-input-area" class="flex border-t border-gray-200 hidden">
+    <input type="text" id="chatbot-input" placeholder="Type your question..." class="flex-grow px-3 py-2 focus:outline-none" />
+    <button id="chatbot-send" class="bg-blue-700 text-white px-4 py-2">Send</button>
+  </div>
+</div>
+
+<!-- Include chatbot JS -->
+<script src="chatbot.js" defer></script>
+
+
 
 </body>
 </html>
