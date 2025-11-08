@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Event</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white p-8 rounded-xl shadow-lg max-w-md w-full">
+    <h2 id="event-title" class="text-2xl font-bold mb-4">Join Event</h2>
+    <form id="joinForm" class="space-y-4">
+      <input type="text" id="name" placeholder="Your Name" required class="w-full border px-4 py-2 rounded">
+      <input type="email" id="email" placeholder="Your Email" required class="w-full border px-4 py-2 rounded">
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 w-full">Join Event</button>
+    </form>
+    <p id="message" class="mt-4 text-sm text-green-600 hidden">✅ Successfully joined!</p>
+  </div>
+
+  <script>
+    const supabase = window.supabase.createClient(
+      'https://uzgszvhdztchlgzbxeon.supabase.co',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV6Z3N6dmhkenRjaGxnemJ4ZW9uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI2MDAxMzAsImV4cCI6MjA3ODE3NjEzMH0.3LYb1PjPNEnGQ325S1NwGdHpCdku7yvL4jAaxnnSTqU'
+    );
+
+    // Get event info from URL
+    const params = new URLSearchParams(window.location.search);
+    const eventId = params.get('event_id');
+    const eventTitle = params.get('title');
+    if (eventTitle) {
+      document.getElementById('event-title').textContent = "Join: " + eventTitle;
+    }
+
+    const form = document.getElementById('joinForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+
+      const { data, error } = await supabase
+        .from('event_registrations')
+        .insert([{ event_id: eventId, name, email }]);
+
+      if (error) {
+        alert("❌ Something went wrong: " + error.message);
+        console.error(error);
+      } else {
+        document.getElementById('message').classList.remove('hidden');
+        form.reset();
+      }
+    });
+  </script>
+
+</body>
+</html>
