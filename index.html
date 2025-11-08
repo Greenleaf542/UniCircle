@@ -146,43 +146,50 @@
   </section>
 
   <!-- Events Section -->
-  <section id="events" class="py-16">
-    <div class=" mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center mb-10">Upcoming Events</h3>
-      <div id="dynamic-events" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center "></div>
-        <!-- Event Card 1 -->
-        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden max-w-sm mx-auto">
-          <img src="/game.webp" alt="Event Image" loading="lazy" class="w-full h-48 object-cover rounded-t-xl" />
-          <div class="p-6">
-            <h4 class="text-xl font-bold mb-2">🎮 LAN Blast – Gaming Tournament</h4>
-            <p class="text-sm text-gray-600 mb-2">Hostel A, July 30 – 7PM to 11PM</p>
-            <p class="text-sm mb-4">Counter Strike | FIFA | Valorant | ₹500 Prize</p>
-            <a href="#" class="text-blue-600 font-semibold hover:underline">Join Now</a>
-          </div>
-        </div>
-        <!-- Event Card 2 -->
-        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden max-w-sm mx-auto">
-          <img src="/study.webp" alt="Event Image" loading="lazy" class="w-full h-48 object-cover rounded-t-xl" />
-          <div class="p-6">
-            <h4 class="text-xl font-bold mb-2">📚 Study Jam – DSA Group Prep</h4>
-            <p class="text-sm text-gray-600 mb-2">Library Room 3, July 31 – 6PM</p>
-            <p class="text-sm mb-4">LeetCode Problems + Mock Quiz + Snacks</p>
-            <a href="#" class="text-blue-600 font-semibold hover:underline">Join Now</a>
-          </div>
-        </div>
-        <!-- Event Card 3 -->
-        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden max-w-sm mx-auto">
-          <img src="/mic.webp" alt="Event Image" loading="lazy" class="w-full h-48 object-cover rounded-t-xl" />
-          <div class="p-6">
-            <h4 class="text-xl font-bold mb-2">🎤 Open Mic – Talent Night</h4>
-            <p class="text-sm text-gray-600 mb-2">Auditorium, August 2 – 5PM</p>
-            <p class="text-sm mb-4">Stand-up, Music, Poetry & Dance</p>
-            <a href="#" class="text-blue-600 font-semibold hover:underline">Join Now</a>
-          </div>
+ <section id="events" class="py-16 bg-gray-50">
+  <div class="px-4 sm:px-6 lg:px-12">
+    <h3 class="text-3xl font-bold text-center mb-10">Upcoming Events</h3>
+
+    <!-- Responsive Event Grid -->
+    <div id="dynamic-events" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      
+      <!-- Event Card 1 -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden w-full">
+        <img src="/game.webp" alt="Event Image" loading="lazy" class="w-full h-48 object-cover rounded-t-xl" />
+        <div class="p-6">
+          <h4 class="text-xl font-bold mb-2">🎮 LAN Blast – Gaming Tournament</h4>
+          <p class="text-sm text-gray-600 mb-2">Hostel A, July 30 – 7PM to 11PM</p>
+          <p class="text-sm mb-4">Counter Strike | FIFA | Valorant | ₹500 Prize</p>
+          <a href="#" class="text-blue-600 font-semibold hover:underline">Join Now</a>
         </div>
       </div>
+
+      <!-- Event Card 2 -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden w-full">
+        <img src="/study.webp" alt="Event Image" loading="lazy" class="w-full h-48 object-cover rounded-t-xl" />
+        <div class="p-6">
+          <h4 class="text-xl font-bold mb-2">📚 Study Jam – DSA Group Prep</h4>
+          <p class="text-sm text-gray-600 mb-2">Library Room 3, July 31 – 6PM</p>
+          <p class="text-sm mb-4">LeetCode Problems + Mock Quiz + Snacks</p>
+          <a href="#" class="text-blue-600 font-semibold hover:underline">Join Now</a>
+        </div>
+      </div>
+
+      <!-- Event Card 3 -->
+      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden w-full">
+        <img src="/mic.webp" alt="Event Image" loading="lazy" class="w-full h-48 object-cover rounded-t-xl" />
+        <div class="p-6">
+          <h4 class="text-xl font-bold mb-2">🎤 Open Mic – Talent Night</h4>
+          <p class="text-sm text-gray-600 mb-2">Auditorium, August 2 – 5PM</p>
+          <p class="text-sm mb-4">Stand-up, Music, Poetry & Dance</p>
+          <a href="#" class="text-blue-600 font-semibold hover:underline">Join Now</a>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Host Event Section -->
   <section id="host" class="relative bg-gray-100 py-16 bg-cover bg-center bg-fixed h-96" 
@@ -292,6 +299,7 @@
 
 </body>
 </html>
+
 
 
 
