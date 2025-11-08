@@ -272,43 +272,10 @@
 
 <!-- Include chatbot JS -->
 <script src="chatbot.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-  const supabase = window.supabase.createClient(
-    'https://uzgszvhdztchlgzbxeon.supabase.co',
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV6Z3N6dmhkenRjaGxnemJ4ZW9uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI2MDAxMzAsImV4cCI6MjA3ODE3NjEzMH0.3LYb1PjPNEnGQ325S1NwGdHpCdku7yvL4jAaxnnSTqU'
-  );
-
-  async function loadEvents() {
-    const { data, error } = await supabase.from('events').select('*');
-    if (error) {
-      console.error('Error fetching events:', error);
-      return;
-    }
-
-    const container = document.getElementById('dynamic-events');
-    container.innerHTML = data.map(event => `
-      <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden">
-        <img src="${event.image_url || '/default-event.jpg'}" alt="${event.title}"
-             class="w-full h-48 object-cover rounded-t-xl" />
-        <div class="p-6">
-          <h4 class="text-xl font-bold mb-2">${event.title}</h4>
-          <p class="text-sm text-gray-600 mb-2">${event.location || ''}, ${event.date || ''}</p>
-          <p class="text-sm mb-4">${event.description || ''}</p>
-          <a href="join.html?event_id=${event.id}&title=${encodeURIComponent(event.title)}"
-             class="text-blue-600 font-semibold hover:underline">Join Now</a>
-        </div>
-      </div>
-    `).join('');
-  }
-
-  loadEvents();
-</script>
-
-
-
+  
 </body>
 </html>
+
 
 
 
